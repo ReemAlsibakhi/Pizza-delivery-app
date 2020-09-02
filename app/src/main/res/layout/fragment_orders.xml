@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:padding="@dimen/margin15"
+    tools:context=".ui.fragment.OrdersFragment">
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/my_orders"
+        android:textSize="14sp"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_order"
+            android:layout_below="@id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin15">
+
+        </androidx.recyclerview.widget.RecyclerView>
+    <TextView
+        android:id="@+id/tv_notFound"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/not_found"
+        android:textSize="18sp"
+        android:visibility="gone"/>
+   <LinearLayout
+       android:id="@+id/linear1"
+       android:layout_width="match_parent"
+       android:orientation="vertical"
+       android:layout_marginTop="@dimen/margin15"
+       android:layout_below="@id/rv_order"
+       android:layout_height="wrap_content">
+
+
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+           <TextView
+               android:text="@string/total_price"
+               android:layout_width="0dp"
+               android:layout_weight="1"
+               android:textSize="@dimen/size14"
+               android:textColor="@color/colorBlack"
+               android:layout_height="wrap_content"
+               android:layout_gravity="start"/>
+
+           <TextView
+               android:id="@+id/total_price"
+               android:layout_width="190dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:gravity="end"
+               android:text="$ 90.0"
+               android:textSize="@dimen/size14" />
+       </LinearLayout>
+       <LinearLayout
+           android:id="@+id/map"
+           android:layout_marginTop="10dp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+           <TextView
+               android:text="@string/send_your_location"
+               android:layout_width="0dp"
+               android:layout_weight="1"
+               android:drawablePadding="@dimen/margin5"
+               android:drawableStart="@drawable/ic_placeholders"
+               android:textSize="@dimen/size14"
+               android:textColor="@color/colorBlack"
+               android:layout_height="wrap_content"
+               android:layout_gravity="start"/>
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_forward_black_24dp"/>
+       </LinearLayout>
+
+       <Button
+           android:id="@+id/btn_orderNow"
+           style="?android:borderlessButtonStyle"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="@dimen/margin15"
+           android:background="@drawable/btn_yellow_bg"
+           android:text="@string/order_now"
+           android:textAllCaps="false"
+           android:layout_marginStart="@dimen/margin15"
+           android:layout_marginEnd="@dimen/margin15"
+           android:textColor="@color/colorWhite"
+           android:textSize="@dimen/size16" />
+   </LinearLayout>
+
+</RelativeLayout>

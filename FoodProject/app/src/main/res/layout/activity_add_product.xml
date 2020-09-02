@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.activity.AddProductActivity"
+    android:background="#fff"
+    android:paddingTop="16dp"
+    android:paddingStart="24dp"
+    android:paddingEnd="24dp"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<!--    <TextView-->
+<!--        android:id="@+id/signup"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Sign Up"-->
+<!--        android:layout_gravity="center_horizontal"-->
+<!--        android:textSize="18sp"-->
+<!--        />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="40dp">
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_product"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/pizza" />
+            <ImageView
+                android:id="@+id/pick_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_menu_camera"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true">
+
+            </ImageView>
+        </RelativeLayout>
+
+
+        <EditText
+            android:id="@+id/tv_nameProduct"
+            android:drawablePadding="16dp"
+            android:padding="15dp"
+            android:layout_marginTop="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:textSize="14sp"
+            android:hint="Product Name"
+            android:background="@drawable/border_edittext"/>
+
+        <EditText
+            android:padding="15dp"
+            android:id="@+id/tv_description"
+            android:drawablePadding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:maxLines="5"
+            android:textSize="14sp"
+            android:hint="Product Description"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/border_edittext"/>
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:layout_marginTop="20dp"
+       >
+       <EditText
+           android:textSize="14sp"
+           android:id="@+id/tv_amount"
+           android:padding="15dp"
+           android:inputType="number"
+           android:drawablePadding="16dp"
+           android:layout_width="0dp"
+           android:layout_weight="1"
+           android:layout_height="55dp"
+           android:hint="Amout"
+           android:background="@drawable/border_edittext"/>
+       <EditText
+           android:textSize="14sp"
+           android:id="@+id/tv_price"
+           android:padding="15dp"
+           android:inputType="number"
+           android:drawablePadding="16dp"
+           android:layout_width="0dp"
+           android:layout_weight="1"
+           android:layout_height="55dp"
+           android:hint="Price"
+           android:background="@drawable/border_edittext"/>
+   </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            >
+            <RatingBar
+                android:id="@+id/tv_rate"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:numStars="2"
+                android:layout_marginEnd="10dp"
+                />
+            <Spinner
+                android:id="@+id/sp_categories"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:entries="@array/categories"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_add"
+            android:textColor="#fff"
+            android:text="Add"
+            android:layout_width="match_parent"
+            android:textAllCaps="false"
+            android:layout_height="48dp"
+            android:layout_marginTop="32dp"
+            android:textSize="16sp"
+            android:shadowDy="18"
+            android:background="@drawable/btn_yellow_bg"
+            style="?android:borderlessButtonStyle"
+            />
+
+</LinearLayout>
+
+</LinearLayout>
